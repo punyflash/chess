@@ -1,0 +1,240 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Graphics/pieces.png" type="Texture" id=1]
+[ext_resource path="res://src/Resources/Pieces.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Resources/Selection.tres" type="TileSet" id=3]
+[ext_resource path="res://src/Scripts/Game/MovedPiece.gd" type="Script" id=4]
+[ext_resource path="res://src/Scripts/Game/Board.gd" type="Script" id=5]
+[ext_resource path="res://src/Scripts/Game/ColumnLabelsNode.gd" type="Script" id=6]
+[ext_resource path="res://src/Scripts/Game/RowLabelsNode.gd" type="Script" id=7]
+[ext_resource path="res://src/Graphics/board.png" type="Texture" id=8]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="BoardTextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 640.0
+texture = ExtResource( 8 )
+stretch_mode = 2
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColumnLabelsNode" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Label1" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 562.0
+margin_right = 638.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "1"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 482.0
+margin_right = 638.0
+margin_bottom = 560.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "2"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 402.0
+margin_right = 638.0
+margin_bottom = 480.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "3"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 322.0
+margin_right = 638.0
+margin_bottom = 400.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "4"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 242.0
+margin_right = 638.0
+margin_bottom = 320.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "5"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 162.0
+margin_right = 638.0
+margin_bottom = 240.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "6"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 82.0
+margin_right = 638.0
+margin_bottom = 160.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "7"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="ColumnLabelsNode"]
+margin_left = 560.0
+margin_top = 2.0
+margin_right = 638.0
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "8"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RowLabelsNode" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="LabelA" type="Label" parent="RowLabelsNode"]
+margin_left = 2.0
+margin_top = 560.0
+margin_right = 80.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "a"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelB" type="Label" parent="RowLabelsNode"]
+margin_left = 82.0
+margin_top = 560.0
+margin_right = 160.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "b"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelC" type="Label" parent="RowLabelsNode"]
+margin_left = 162.0
+margin_top = 560.0
+margin_right = 240.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "c"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelD" type="Label" parent="RowLabelsNode"]
+margin_left = 242.0
+margin_top = 560.0
+margin_right = 320.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "d"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelE" type="Label" parent="RowLabelsNode"]
+margin_left = 322.0
+margin_top = 560.0
+margin_right = 400.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "e"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelF" type="Label" parent="RowLabelsNode"]
+margin_left = 402.0
+margin_top = 560.0
+margin_right = 480.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "f"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelG" type="Label" parent="RowLabelsNode"]
+margin_left = 482.0
+margin_top = 560.0
+margin_right = 560.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.945098, 0.964706, 0.698039, 1 )
+text = "g"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelH" type="Label" parent="RowLabelsNode"]
+margin_left = 562.0
+margin_top = 559.0
+margin_right = 640.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 0.34902, 0.576471, 0.364706, 1 )
+text = "h"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Selection" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 80, 80 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+
+[node name="Board" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 80, 80 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+
+[node name="MovedPiece" type="Sprite" parent="Board"]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 80, 80 )
+script = ExtResource( 4 )
